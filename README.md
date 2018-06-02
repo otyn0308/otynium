@@ -1,1 +1,1 @@
-# otyn-colorscheme
+# otyn-colors
