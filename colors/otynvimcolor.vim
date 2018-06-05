@@ -8,7 +8,7 @@ endif
 
 let g:colors_name = "otynvimcolor"
 
-hi Normal          guifg=#F8F8F2 guibg=#1B1D1E
+hi Normal          guifg=#F8F8F2 guibg=#263238
 hi Comment         guifg=#7E8E91
 hi CursorLine                    guibg=#293739
 hi CursorLineNr    guifg=#FD971F               gui=none
@@ -17,6 +17,7 @@ hi ColorColumn                   guibg=#232526
 hi LineNr          guifg=#465457 guibg=#232526
 hi NonText         guifg=#465457
 hi SpecialKey      guifg=#465457
+hi Comment         guifg=#4e5c63
 
 "てきとうなので置きたいやつをここに置きます．==============
 hi Normal           ctermfg=252 ctermbg=235
