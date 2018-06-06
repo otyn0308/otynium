@@ -8,18 +8,111 @@ endif
 
 let g:colors_name = "otynvimcolor"
 
-hi Normal          guifg=#F8F8F2 guibg=#263238
-hi Comment         guifg=#7E8E91
-hi CursorLine                    guibg=#293739
-hi CursorLineNr    guifg=#FD971F               gui=none
-hi CursorColumn                  guibg=#293739
-hi ColorColumn                   guibg=#232526
-hi LineNr          guifg=#465457 guibg=#232526
-hi NonText         guifg=#465457
-hi SpecialKey      guifg=#465457
-hi Comment         guifg=#4e5c63
+hi Normal           guifg=#f8f8f2 guibg=#263238
+hi NonText          guifg=#465457
+hi Cursor           guifg= guibg=
+hi CursorLine                     guibg=#293739
+hi CursorLineNr     guifg=#fd971f
+hi LineNr           guifg=#465457 guibg=#232526
+hi StatusLine       guifg= guibg=
+hi StatusLineNC     guifg= guibg=
+hi StatusLineTerm   guifg= guibg=
+hi StatusLineTermNC guifg= guibg=
+"hi FoldColumn       guifg= guibg=
+"""しんたっくすはいらいと=====================================
 
-"てきとうなので置きたいやつをここに置きます．==============
+"めんどうなときはダブルクオーテーションが１つついているやつだけ定義すればなんとかなるらしい。
+"でもせっかくなのでできる限りぜんぶやります。
+
+""定数・変数-----------------------
+"hi Constant         guifg=
+hi String           guifg=
+hi Character        guifg=
+hi Number           guifg=
+hi Float            guifg=
+hi Boolean          guifg=
+hi Function         guifg=
+""hoge文で使うやつ-----------------
+"hi Statement        guif
+hi Conditional      guifg=
+hi Repeat           guifg=
+hi Label            guifg=
+hi Operator         guifg=
+hi keyword          guifg=
+hi Exception        guifg=
+""型-------------------------------
+"hi Type             guifg=011
+hi Typedef          guifg=
+hi StorageClass     guifg=
+hi Structure        guifg=
+""ぷりぷろせっさー-----------------
+"hi PreProc          guifg=031
+hi Include          guifg=
+hi Define           guifg=
+hi Macro            guifg=
+hi PreCondit        guifg=
+""とくべつな文字とか--------------- 
+"hi Special          guifg=
+hi SpecialChar      guifg=
+hi SpecialComment   guifg=
+hi Debug            guifg=
+hi Delimiter        guifg=
+hi Tag              guifg=
+
+hi Underlined       guifg=
+hi Comment          guifg=#4e5c63
+hi Todo             guifg= guibg=
+hi Ignore           guifg= guibg=
+hi Error            guifg= guibg=
+hi MatchParen       guifg= guibg=
+
+"default highlighting======================================
+hi Title            guifg=
+hi Directory        guifg=
+"""""ぽっぷあっぷめにゅー-------------
+hi Pmenu            guifg=
+hi PmenuSel         guifg=
+hi PmenuSbar        guifg=
+hi PmenuThumb       guifg=
+"けんさく-------------------------
+hi Search           guifg= guibg=
+hi IncSearch        guifg= guibg=
+"さぶん---------------------------
+hi DiffAdd          guifg= guibg=
+hi DiffChange       guifg= guibg=
+hi DiffDelete       guifg= guibg=
+hi DiffText                guibg=
+"すぺるかんけい-------------------
+hi SpellBad         guifg=
+hi SpellCap         guifg=
+hi SpellLocal       guifg=
+hi SpellRare        guifg=
+hi SpecialKey       guifg=#465457
+hi WildMenu         guifg=
+"おりたたみ・かれんとういんどう---
+hi Folded           guifg=
+hi FoldColumn       guifg=
+hi VertSplit        guifg=
+hi TabLine          guifg=
+hi TabLineFill      guifg=
+hi TabLineSel       guifg=
+hi Cursorline       guifg=
+"こまんどらいんにいる-------------
+hi CursorColumn            guibg=#293739
+hi ColorColumn             guibg=#232526
+hi SignColumn       guifg=
+hi Question         guifg=
+hi Visual           guifg=
+hi VisualNOS        guifg= guibg=
+hi ModeMsg          guifg=
+hi MoreMsg          guifg=
+hi WarningMsg       guifg=
+hi ErrorMsg         guifg=
+
+
+""256-color terminal
+
+"置きたいやつをここに置きました．==============
 hi Normal           ctermfg=252 ctermbg=235
 hi NonText          ctermfg=000 ctermbg=235
 hi Cursor           ctermfg=242 ctermbg=244
@@ -32,10 +125,6 @@ hi StatusLineTerm   ctermfg=230 ctermbg=235
 hi StatusLineTermNC ctermfg=230 ctermbg=235
 "hi FoldColumn      ctermfg=  ctermbg=
 """しんたっくすはいらいと=====================================
-
-"めんどうなときはダブルクオーテーションが１つついているやつだけ定義すればなんとかなるらしい。
-"でもせっかくなのでできる限りぜんぶやります。
-
 ""定数・変数-----------------------
 "hi Constant         ctermfg=
 hi String           ctermfg=006
