@@ -12,10 +12,10 @@ hi Normal           guifg=#f8f8f2 guibg=#263238
 hi NonText          guifg=#465457
 hi Cursor           guifg= guibg=
 hi CursorLine                     guibg=#293739
-hi CursorLineNr     guifg=#fd971f
-hi LineNr           guifg=#465457 guibg=#232526
-hi StatusLine       guifg= guibg=
-hi StatusLineNC     guifg= guibg=
+hi CursorLineNr     guifg=#70ace5
+hi LineNr           guifg=#465457 guibg=#293739
+hi StatusLine       guifg=#aebbc5 guibg=#425762
+hi StatusLineNC     guifg=#2c3a41 guibg=#658494
 hi StatusLineTerm   guifg= guibg=
 hi StatusLineTermNC guifg= guibg=
 "hi FoldColumn       guifg= guibg=
