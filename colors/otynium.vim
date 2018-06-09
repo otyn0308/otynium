@@ -16,25 +16,27 @@ let g:colors_name = "otynium"
 "cyan    #67d2e5
 "blue    #6882e2
 "purple  #b281d1
-"gray1   #2c3a41
-"gray2   #465457
-"gray3   #4e5c63
-"gray4   #658494 
-"gray5   #aebbc5
-"white   #dedee8
+"
+"gray1   #222c33
+"gray2   #314047
+"gray3   #506872
+"gray4   #5f7b87
+"gray5   #7395a3
+"
+"white   #a9afb2
 "black   #232526
 
-hi Normal           guifg=#dedee8 guibg=#2c3a41
-hi NonText          guifg=#465457
-hi Cursor           guifg=#465457 guibg=#658494 gui=none
-hi CursorLine                     guibg=#465457 gui=none cterm=none
-hi CursorLineNr     guifg=#67d2e5 guibg=#465457 gui=none
-hi CursorColumn                   guibg=#465457 
-hi LineNr           guifg=#465457
-hi StatusLine       guifg=#aebbc5 guibg=#465457
-hi StatusLineNC     guifg=#2c3a41 guibg=#658494
-hi StatusLineTerm   guifg=#aebbc5 guibg=#465457
-hi StatusLineTermNC guifg=#2c3a41 guibg=#658494
+hi Normal           guifg=#a9afb2 guibg=#222c33
+hi NonText          guifg=#314047
+hi Cursor           guifg=#314047 guibg=#506872 gui=none
+hi CursorLine                     guibg=#314047 gui=none cterm=none
+hi CursorLineNr     guifg=#67d2e5 guibg=#314047 gui=none
+hi CursorColumn                   guibg=#314047 
+hi LineNr           guifg=#314047
+hi StatusLine       guifg=#7395a3 guibg=#314047
+hi StatusLineNC     guifg=#222c33 guibg=#5f7b87
+hi StatusLineTerm   guifg=#7395a3 guibg=#314047
+hi StatusLineTermNC guifg=#222c33 guibg=#5f7b87
 """しんたっくすはいらいと=====================================
 
 "めんどうなときはダブルクオーテーションが１つついているやつだけ定義すればなんとかなるらしい。
@@ -77,48 +79,48 @@ hi Delimiter        guifg=#e8a368
 hi Tag              guifg=#6882e2
 
 hi Underlined       guifg=#ef69e2
-hi Comment          guifg=#658494
-hi Todo             guifg=#232526 guibg=#e0be62
-hi Ignore           guifg=#4e5c63
+hi Comment          guifg=#5f7b87
+hi Todo             guifg=#222c33 guibg=#e0be62
+hi Ignore           guifg=#506872
 hi Error            guifg=#ef7070
-hi MatchParen       guifg=#465457 guibg=#67d2e5
+hi MatchParen       guifg=#314047 guibg=#67d2e5
 
 "default highlighting======================================
 hi Title            guifg=#85c178
 hi Directory        guifg=#6882e2
 """""ぽっぷあっぷめにゅー-------------
-hi Pmenu            guifg=#dedee8
-hi PmenuSel         guifg=#6882e2 guibg=#465457
-hi PmenuSbar        guifg=#658494
-hi PmenuThumb       guifg=#658494
+hi Pmenu            guifg=#a9afb2
+hi PmenuSel         guifg=#6882e2 guibg=#314047
+hi PmenuSbar        guifg=#5f7b87
+hi PmenuThumb       guifg=#5f7b87
 "けんさく-------------------------
-hi Search           guifg=#465457 guibg=#e0be62
-hi IncSearch        guifg=#2c3a41 guibg=#e0be62
+hi Search           guifg=#314047 guibg=#e0be62
+hi IncSearch        guifg=#222c33 guibg=#e0be62
 "さぶん---------------------------
-hi DiffAdd          guifg=#67d2e5 guibg=#465457
-hi DiffChange       guifg=#e0be62 guibg=#465457
-hi DiffDelete       guifg=#ef7070 guibg=#465457
-hi DiffText         guifg=#85c178 guibg=#465457
+hi DiffAdd          guifg=#67d2e5 guibg=#314047
+hi DiffChange       guifg=#e0be62 guibg=#314047
+hi DiffDelete       guifg=#ef7070 guibg=#314047
+hi DiffText         guifg=#85c178 guibg=#314047
 "すぺるかんけい-------------------
 hi SpellBad         guifg=#ef7070
 hi SpellCap         guifg=#6882e2
 hi SpellLocal       guifg=#85c178
-hi SpellRare        guifg=#465457 guibg=#e0be62
-hi SpecialKey       guifg=#465457
+hi SpellRare        guifg=#314047 guibg=#e0be62
+hi SpecialKey       guifg=#314047
 hi WildMenu         guifg=#6882e2
 "おりたたみ・かれんとういんどう---
-hi Folded           guifg=#658494 guibg=#2c3a41
-hi FoldColumn       guifg=#658494 guibg=#2c3a41
-hi VertSplit        guifg=#658494
-hi TabLine          guifg=#658494 guibg=#465457
-hi TabLineFill      guifg=#658494 guibg=#465457
-hi TabLineSel       guifg=#e8a368 guibg=#4e5c63
+hi Folded           guifg=#5f7b87 guibg=#222c33
+hi FoldColumn       guifg=#5f7b87 guibg=#222c33
+hi VertSplit        guifg=#5f7b87
+hi TabLine          guifg=#5f7b87 guibg=#314047
+hi TabLineFill      guifg=#5f7b87 guibg=#314047
+hi TabLineSel       guifg=#e8a368 guibg=#506872
 "こまんどらいんにいる-------------
-hi ColorColumn                    guibg=#232526
-hi SignColumn       guifg=#aebbc5 guibg=#2c3a41
+hi ColorColumn                    guibg=#222c33
+hi SignColumn       guifg=#7395a3 guibg=#222c33
 hi Question         guifg=#67d2e5
-hi Visual           guifg=#aebbc5 guibg=#4e5c63
-hi VisualNOS        guifg=#aebbc5 guibg=#4e5c63
+hi Visual           guifg=#7395a3 guibg=#506872
+hi VisualNOS        guifg=#7395a3 guibg=#506872
 hi ModeMsg          guifg=#e0be62
 hi MoreMsg          guifg=#e0be62
 hi WarningMsg       guifg=#ef7070
