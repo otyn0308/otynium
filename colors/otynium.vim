@@ -13,7 +13,7 @@ let g:colors_name = "otynium"
 "orange  #e8a368
 "yellow  #e0be62
 "green   #85c178
-"cyan    #67d2e5
+"cyan    #64bac9
 "blue    #6882e2
 "purple  #b281d1
 "
@@ -30,7 +30,7 @@ hi Normal           guifg=#a9afb2 guibg=#222c33
 hi NonText          guifg=#314047
 hi Cursor           guifg=#314047 guibg=#506872 gui=none
 hi CursorLine                     guibg=#314047 gui=none cterm=none
-hi CursorLineNr     guifg=#67d2e5 guibg=#314047 gui=none
+hi CursorLineNr     guifg=#64bac9 guibg=#314047 gui=none
 hi CursorColumn                   guibg=#314047 
 hi LineNr           guifg=#314047
 hi StatusLine       guifg=#7395a3 guibg=#314047
@@ -49,14 +49,14 @@ hi Character        guifg=#85c178
 hi Number           guifg=#e8a368
 hi Float            guifg=#e8a368
 hi Boolean          guifg=#e8a368
-hi Identifier       guifg=#6882e2               gui=none cterm=none
+hi Identifier       guifg=#ef7070               gui=none cterm=none
 hi Function         guifg=#76b9e0
 ""hoge文で使うやつ-----------------
 hi Statement        guifg=#b281d1
 hi Conditional      guifg=#b281d1
 hi Repeat           guifg=#b281d1
 hi Label            guifg=#b281d1
-hi Operator         guifg=#67d2e5
+hi Operator         guifg=#6882e2
 hi keyword          guifg=#b281d1
 hi Exception        guifg=#e0be62
 ""型-------------------------------
@@ -65,17 +65,17 @@ hi Typedef          guifg=#e0be62
 hi StorageClass     guifg=#e8a368
 hi Structure        guifg=#e8a368
 ""ぷりぷろせっさー-----------------
-hi PreProc          guifg=#67d2e5
-hi Include          guifg=#67d2e5
-hi Define           guifg=#67d2e5
-hi Macro            guifg=#67d2e5
+hi PreProc          guifg=#64bac9
+hi Include          guifg=#64bac9
+hi Define           guifg=#64bac9
+hi Macro            guifg=#64bac9
 hi PreCondit        guifg=#6882e2
 ""とくべつな文字とか--------------- 
-hi Special          guifg=#e8a368
-hi SpecialChar      guifg=#e8a368
-hi SpecialComment   guifg=#ef7070
+hi Special          guifg=#64bac9
+hi SpecialChar      guifg=#64bac9
+hi SpecialComment   guifg=#64bac9
 hi Debug            guifg=#ef7070
-hi Delimiter        guifg=#e8a368
+hi Delimiter        guifg=#6882e2
 hi Tag              guifg=#6882e2
 
 hi Underlined       guifg=#ef69e2
@@ -83,7 +83,7 @@ hi Comment          guifg=#5f7b87
 hi Todo             guifg=#222c33 guibg=#e0be62
 hi Ignore           guifg=#506872
 hi Error            guifg=#ef7070
-hi MatchParen       guifg=#314047 guibg=#67d2e5
+hi MatchParen       guifg=#314047 guibg=#64bac9
 
 "default highlighting======================================
 hi Title            guifg=#85c178
@@ -97,7 +97,7 @@ hi PmenuThumb       guifg=#5f7b87
 hi Search           guifg=#314047 guibg=#e0be62
 hi IncSearch        guifg=#222c33 guibg=#e0be62
 "さぶん---------------------------
-hi DiffAdd          guifg=#67d2e5 guibg=#314047
+hi DiffAdd          guifg=#64bac9 guibg=#314047
 hi DiffChange       guifg=#e0be62 guibg=#314047
 hi DiffDelete       guifg=#ef7070 guibg=#314047
 hi DiffText         guifg=#85c178 guibg=#314047
@@ -118,7 +118,7 @@ hi TabLineSel       guifg=#e8a368 guibg=#506872
 "こまんどらいんにいる-------------
 hi ColorColumn                    guibg=#222c33
 hi SignColumn       guifg=#7395a3 guibg=#222c33
-hi Question         guifg=#67d2e5
+hi Question         guifg=#64bac9
 hi Visual           guifg=#7395a3 guibg=#506872
 hi VisualNOS        guifg=#7395a3 guibg=#506872
 hi ModeMsg          guifg=#e0be62
