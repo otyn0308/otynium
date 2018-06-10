@@ -1,3 +1,3 @@
-##otynium
+## otynium
 
  vim colorscheme
