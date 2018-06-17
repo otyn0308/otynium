@@ -39,16 +39,17 @@ hi StatusLineTerm   guifg=#7395a3 guibg=#314047
 hi StatusLineTermNC guifg=#222c33 guibg=#5f7b87
 """しんたっくすはいらいと=====================================
 
-"めんどうなときはダブルクオーテーションが１つついているやつだけ定義すればなんとかなるらしい。
-"でもせっかくなのでできる限りぜんぶやります。
+"めんどうなときは基本仕切りのすぐ下のやつを定義すればなんとかなるらしい．
+"せっかくなのでできる限りぜんぶやります。
 
-""定数・変数-----------------------
+""定数-----------------------------
 hi Constant         guifg=#e8a368
 hi String           guifg=#85c178
 hi Character        guifg=#85c178
 hi Number           guifg=#e8a368
 hi Float            guifg=#e8a368
 hi Boolean          guifg=#e8a368
+""変数・関数-----------------------
 hi Identifier       guifg=#ef7070               gui=none cterm=none
 hi Function         guifg=#76b9e0
 ""hoge文で使うやつ-----------------
@@ -77,6 +78,7 @@ hi SpecialComment   guifg=#64bac9
 hi Debug            guifg=#ef7070
 hi Delimiter        guifg=#6882e2
 hi Tag              guifg=#6882e2
+
 
 hi Underlined       guifg=#ef69e2
 hi Comment          guifg=#5f7b87
