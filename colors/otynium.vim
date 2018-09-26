@@ -1,30 +1,33 @@
 hi clear
 if version > 580
-  hi clear
-  if exists("syntax_on")
-    syntax reset
-  endif
+  hi clear 
+  if exists("syntax_on") 
+    syntax reset 
+  endif 
 endif
 
 let g:colors_name = "otynium"
 
-"pink    #ef69e2
-"red     #ef7070
-"orange  #e8a368
-"yellow  #d8cf6c
-"green   #85c178
-"cyan    #64bac9
-"blue    #6882e2
-"purple  #b281d1
+"pink       #ef69e2
+"red        #ef7070
+"orange     #e8a368
+"yellow     #d8cf6c
+"      2    #e2d86a
+"green      #85c178
+"     2     #5cc46b
+"cyan       #64bac9
+"blue       #6882e2
+"bluepurple #6d1ebc
+"purple     #b281d1
 "
-"gray1   #222c33
-"gray2   #314047
-"gray3   #506872
-"gray4   #5f7b87
-"gray5   #7395a3
+"gray1      #222c33
+"gray2      #314047
+"gray3      #506872
+"gray4      #5f7b87
+"gray5      #7395a3
 "
-"white   #a9afb2
-"black   #232526
+"white      #a9afb2
+"black      #232526
 
 hi Normal           guifg=#a9afb2 guibg=#222c33
 hi NonText          guifg=#314047
@@ -99,9 +102,9 @@ hi Search           guifg=#314047 guibg=#d8cf6c
 hi IncSearch        guifg=#222c33 guibg=#d8cf6c
 "差分-----------------------------
 hi DiffAdd          guifg=#64bac9 guibg=#314047
-hi DiffChange       guifg=#d8cf6c guibg=#314047
+hi DiffChange       guifg=#e2d86a guibg=#314047 
 hi DiffDelete       guifg=#ef7070 guibg=#314047
-hi DiffText         guifg=#85c178 guibg=#314047
+hi DiffText         guifg=#5cc46b guibg=#314047
 "スペル関係-----------------------
 hi SpellBad         guifg=#ef7070
 hi SpellCap         guifg=#6882e2
