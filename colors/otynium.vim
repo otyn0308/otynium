@@ -12,9 +12,9 @@ let g:colors_name = "otynium"
 "red        #ef7070
 "orange     #e8a368
 "yellow     #d8cf6c
-"      2    #e2d86a
+"yellow2    #e2d86a
 "green      #85c178
-"     2     #5cc46b
+"green2     #5cc46b
 "cyan       #64bac9
 "blue       #6882e2
 "bluepurple #6d1ebc
@@ -41,10 +41,7 @@ hi StatusLineNC     guifg=#222c33 guibg=#5f7b87
 hi StatusLineTerm   guifg=#7395a3 guibg=#314047
 hi StatusLineTermNC guifg=#222c33 guibg=#5f7b87
 """syntax highright========================================
-
-"めんどうなときは基本仕切りのすぐ下のやつを定義すればなんとかなるらしい．
-
-""定数-----------------------------
+"定数-----------------------------
 hi Constant         guifg=#e8a368
 hi String           guifg=#85c178
 hi Character        guifg=#85c178

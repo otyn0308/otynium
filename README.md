@@ -1,6 +1,8 @@
 # otynium
 vim colorscheme
 
+[Screenshot from 2018-12-08 12-24-38.png](https://github.com/otyn0308/otynium/blob/master/Screenshot%20from%202018-12-08%2012-24-38.png)
+
 ## install
 
 ```
