@@ -127,4 +127,5 @@ hi MoreMsg          guifg=#d8cf6c
 hi WarningMsg       guifg=#ef7070
 hi ErrorMsg         guifg=#ef7070
 
-set background=dark 
+set background=dark
+set termguicolors
