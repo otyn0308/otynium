@@ -1,3 +1,5 @@
+"  Colorscheme initialization
+"----------------------------------------------------------
 hi clear
 if version > 580
   hi clear 
@@ -11,120 +13,132 @@ set termguicolors
 "set t_Co=256
 let g:colors_name = "otynium"
 
-"red        #ef7070
-"orange     #e8a368
-"yellow     #d8cf6c
-"yellow2    #e2d86a
-"green      #85c178
-"green2     #5cc46b
-"cyan       #64bac9
-"blue       #6882e2
-"bluepurple #6d1ebc
-"purple     #b281d1
-"
-"gray1      #222c33
-"gray2      #314047
-"gray3      #506872
-"gray4      #5f7b87
-"gray5      #7395a3
-"
-"white      #a9afb2
-
-hi Normal           guifg=#a9afb2 guibg=#222c33
-hi NonText          guifg=#314047
-hi Cursor           guifg=#314047 guibg=#506872 gui=none
-hi CursorLine                     guibg=#314047 gui=none cterm=none
-hi CursorLineNr     guifg=#64bac9 guibg=#314047 gui=none
-hi CursorColumn                   guibg=#314047 
-hi LineNr           guifg=#314047
-hi StatusLine       guifg=#7395a3 guibg=#314047
-hi StatusLineNC     guifg=#222c33 guibg=#5f7b87
-hi StatusLineTerm   guifg=#7395a3 guibg=#314047
-hi StatusLineTermNC guifg=#222c33 guibg=#5f7b87
-
-"""syntax highright========================================
-hi Constant         guifg=#e8a368
-hi String           guifg=#85c178
-hi Character        guifg=#85c178
-hi Number           guifg=#e8a368
-hi Float            guifg=#e8a368
-hi Boolean          guifg=#e8a368
-
-hi Identifier       guifg=#ef7070               gui=none cterm=none
-hi Function         guifg=#64bac9
-
-hi Statement        guifg=#b281d1
-hi Conditional      guifg=#b281d1
-hi Repeat           guifg=#b281d1
-hi Label            guifg=#b281d1
-hi Operator         guifg=#6882e2
-hi keyword          guifg=#b281d1
-hi Exception        guifg=#d8cf6c
-
-hi Type             guifg=#d8cf6c
-hi StorageClass     guifg=#e8a368
-hi Structure        guifg=#e8a368
-hi Typedef          guifg=#d8cf6c
-
-hi PreProc          guifg=#64bac9
-hi Include          guifg=#64bac9
-hi Define           guifg=#64bac9
-hi Macro            guifg=#64bac9
-hi PreCondit        guifg=#6882e2
-
-hi Special          guifg=#64bac9
-hi SpecialChar      guifg=#64bac9
-hi Tag              guifg=#6882e2
-hi Delimiter        guifg=#6882e2
-hi SpecialComment   guifg=#64bac9
-hi Debug            guifg=#ef7070
+"  Color palette
+"----------------------------------------------------------
+let s:red        = '#ef7070'
+let s:orange     = '#e8a368'
+let s:yellow     = '#d8cf6c'
+let s:yellow2    = '#e2d86a'
+let s:green      = '#85c178'
+let s:green2     = '#5cc46b'
+let s:cyan       = '#64bac9'
+let s:blue       = '#6882e2'
+let s:bluepurple = '#6d1ebc'
+let s:purple     = '#b281d1'
+let s:gray1      = '#222c33'
+let s:gray2      = '#314047'
+let s:gray3      = '#506872'
+let s:gray4      = '#5f7b87'
+let s:gray5      = '#7395a3'
+let s:white      = '#a9afb2'
 
 
-hi Underlined       guifg=#ef7070
-hi Comment          guifg=#5f7b87
-hi Todo             guifg=#222c33 guibg=#d8cf6c
-hi Ignore           guifg=#506872
-hi Error            guifg=#ef7070
-hi MatchParen       guifg=#314047 guibg=#64bac9
+function! s:HL(group, guifg, guibg, attr)
+  if a:guifg != ''
+    exec 'hi ' . a:group . ' guifg=' . a:guifg
+  endif
+  if a:guibg != ''
+    exec 'hi ' . a:group . ' guibg=' . a:guibg
+  endif
+  if a:attr != ''
+    exec 'hi ' . a:group . ' gui=' . a:attr . ' cterm=' . a:attr
+  endif
+endfun
+
+
+call s:HL('Normal',           s:white,   s:gray1,  '')
+call s:HL('NonText',          s:gray2,   '',       '')
+call s:HL('Cursor',           s:gray2,   s:gray3,  'none')
+call s:HL('CursorLine',       '',        s:gray2,  'none')
+call s:HL('CursorLineNr',     s:cyan,    s:gray2,  'none')
+call s:HL('CursorColumn',     '',        s:gray2,  '')
+call s:HL('LineNr',           s:gray2,   '',       '')
+call s:HL('StatusLine',       s:gray5,   s:gray2,  '')
+call s:HL('StatusLineNC',     s:gray1,   s:gray4,  '')
+call s:HL('StatusLineTerm',   s:gray5,   s:gray2,  '')
+call s:HL('StatusLineTermNC', s:gray1,   s:gray4,  '')
+
+"  syntax highright========================================
+call s:HL('Constant',         s:orange,  '',       '')
+call s:HL('String',           s:green,   '',       '')
+call s:HL('Character',        s:green,   '',       '')
+call s:HL('Number',           s:orange,  '',       '')
+call s:HL('Float',            s:orange,  '',       '')
+call s:HL('Boolean',          s:orange,  '',       '')
+call s:HL('Identifier',       s:red,     '',       'none')
+call s:HL('Function',         s:cyan,    '',       '')
+
+call s:HL('Statement',        s:purple,  '',       '')
+call s:HL('Conditional',      s:purple,  '',       '')
+call s:HL('Repeat',           s:purple,  '',       '')
+call s:HL('Label',            s:purple,  '',       '')
+call s:HL('Operator',         s:blue,    '',       '')
+call s:HL('keyword',          s:purple,  '',       '')
+call s:HL('Exception',        s:yellow,  '',       '')
+
+call s:HL('Type',             s:yellow,  '',       '')
+call s:HL('StorageClass',     s:orange,  '',       '')
+call s:HL('Structure',        s:orange,  '',       '')
+call s:HL('Typedef',          s:yellow,  '',       '')
+
+call s:HL('PreProc',          s:cyan,    '',       '')
+call s:HL('Include',          s:cyan,    '',       '')
+call s:HL('Define',           s:cyan,    '',       '')
+call s:HL('Macro',            s:cyan,    '',       '')
+call s:HL('PreCondit',        s:blue,    '',       '')
+
+call s:HL('Special',          s:cyan,    '',       '')
+call s:HL('SpecialChar',      s:cyan,    '',       '')
+call s:HL('Tag',              s:blue,    '',       '')
+call s:HL('Delimiter',        s:blue,    '',       '')
+call s:HL('SpecialComment',   s:cyan,    '',       '')
+call s:HL('Debug',            s:red,     '',       '')
+
+call s:HL('Underlined',       s:red,     '',       '')
+call s:HL('Comment',          s:gray4,   '',       '')
+call s:HL('Todo',             s:gray1,   s:yellow, '')
+call s:HL('Ignore',           s:gray3,   '',       '')
+call s:HL('Error',            s:red,     '',       '')
+call s:HL('MatchParen',       s:gray2,   s:cyan,   '')
 
 "default highlighting======================================
-hi Title            guifg=#85c178
-hi Directory        guifg=#6882e2
+call s:HL('Title',            s:green,   '',       '')
+call s:HL('Directory',        s:blue,    '',       '')
 
-hi Pmenu            guifg=#a9afb2
-hi PmenuSel         guifg=#6882e2 guibg=#314047
-hi PmenuSbar        guifg=#5f7b87
-hi PmenuThumb       guifg=#5f7b87
+call s:HL('Pmenu',            s:white,   '',       '')
+call s:HL('PmenuSel',         s:blue,    s:gray2,  '')
+call s:HL('PmenuSbar',        s:gray4,   '',       '')
+call s:HL('PmenuThumb',       s:gray4,   '',       '')
 
-hi Search           guifg=#314047 guibg=#d8cf6c
-hi IncSearch        guifg=#222c33 guibg=#d8cf6c
+call s:HL('Search',           s:gray2,   s:yellow, '')
+call s:HL('IncSearch',        s:gray1,   s:yellow, '')
 
-hi DiffAdd          guifg=#64bac9 guibg=#314047
-hi DiffChange       guifg=#e2d86a guibg=#314047 
-hi DiffDelete       guifg=#ef7070 guibg=#314047
-hi DiffText         guifg=#5cc46b guibg=#314047
+call s:HL('DiffAdd',          s:cyan,    s:gray2,  '')
+call s:HL('DiffChange',       s:yellow2, s:gray2,  '')
+call s:HL('DiffDelete',       s:red,     s:gray2,  '')
+call s:HL('DiffText',         s:green2,  s:gray2,  '')
 
-hi SpellBad         guifg=#ef7070
-hi SpellCap         guifg=#6882e2
-hi SpellLocal       guifg=#85c178
-hi SpellRare        guifg=#314047 guibg=#d8cf6c
-hi SpecialKey       guifg=#314047
-hi WildMenu         guifg=#6882e2
+call s:HL('SpellBad',         s:red,     '',       '')
+call s:HL('SpellCap',         s:blue,    '',       '')
+call s:HL('SpellLocal',       s:green,   '',       '')
+call s:HL('SpellRare',        s:gray2,   s:yellow, '')
+call s:HL('SpecialKey',       s:gray2,   '',       '')
+call s:HL('WildMenu',         s:blue,    '',       '')
 
-hi Folded           guifg=#5f7b87 guibg=#222c33
-hi FoldColumn       guifg=#5f7b87 guibg=#222c33
-hi VertSplit        guifg=#5f7b87
-hi TabLine          guifg=#5f7b87 guibg=#314047
-hi TabLineFill      guifg=#5f7b87 guibg=#314047
-hi TabLineSel       guifg=#e8a368 guibg=#506872
+call s:HL('Folded',           s:gray4,   s:gray1,  '')
+call s:HL('FoldColumn',       s:gray4,   s:gray1,  '')
+call s:HL('VertSplit',        s:gray4,   '',       '')
+call s:HL('TabLine',          s:gray4,   s:gray2,  '')
+call s:HL('TabLineFill',      s:gray4,   s:gray2,  '')
+call s:HL('TabLineSel',       s:orange,  s:gray3,  '')
 
-hi ColorColumn                    guibg=#222c33
-hi SignColumn       guifg=#7395a3 guibg=#222c33
-hi Question         guifg=#64bac9
-hi Visual           guifg=#7395a3 guibg=#506872
-hi VisualNOS        guifg=#7395a3 guibg=#506872
-hi ModeMsg          guifg=#d8cf6c
-hi MoreMsg          guifg=#d8cf6c
-hi WarningMsg       guifg=#ef7070
-hi ErrorMsg         guifg=#ef7070
+call s:HL('ColorColumn',      '',        s:gray1,  '')
+call s:HL('SignColumn',       s:gray5,   s:gray1,  '')
+call s:HL('Question',         s:cyan,    '',       '')
+call s:HL('Visual',           s:gray5,   s:gray3,  '')
+call s:HL('VisualNOS',        s:gray5,   s:gray3,  '')
+call s:HL('ModeMsg',          s:yellow,  '',       '')
+call s:HL('MoreMsg',          s:yellow,  '',       '')
+call s:HL('WarningMsg',       s:red,     '',       '')
+call s:HL('ErrorMsg',         s:red,     '',       '')
 
