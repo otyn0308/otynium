@@ -1,4 +1,4 @@
-"  Colorscheme initialization
+" Colorscheme initialization
 "----------------------------------------------------------
 hi clear
 if version > 580
@@ -13,7 +13,7 @@ set termguicolors
 "set t_Co=256
 let g:colors_name = "otynium"
 
-"  Color palette
+" Color palette
 "----------------------------------------------------------
 let s:red        = '#ef7070'
 let s:orange     = '#e8a368'
@@ -32,7 +32,6 @@ let s:gray4      = '#5f7b87'
 let s:gray5      = '#7395a3'
 let s:white      = '#a9afb2'
 
-
 function! s:HL(group, guifg, guibg, attr)
   if a:guifg != ''
     exec 'hi ' . a:group . ' guifg=' . a:guifg
@@ -46,6 +45,7 @@ function! s:HL(group, guifg, guibg, attr)
 endfun
 
 
+" default highlighting======================================
 call s:HL('Normal',           s:white,   s:gray1,  '')
 call s:HL('NonText',          s:gray2,   '',       '')
 call s:HL('Cursor',           s:gray2,   s:gray3,  'none')
@@ -58,7 +58,47 @@ call s:HL('StatusLineNC',     s:gray1,   s:gray4,  '')
 call s:HL('StatusLineTerm',   s:gray5,   s:gray2,  '')
 call s:HL('StatusLineTermNC', s:gray1,   s:gray4,  '')
 
-"  syntax highright========================================
+call s:HL('Title',            s:green,   '',       '')
+call s:HL('Directory',        s:blue,    '',       '')
+
+call s:HL('Pmenu',            s:white,   '',       '')
+call s:HL('PmenuSel',         s:blue,    s:gray2,  '')
+call s:HL('PmenuSbar',        s:gray4,   '',       '')
+call s:HL('PmenuThumb',       s:gray4,   '',       '')
+
+call s:HL('Search',           s:gray2,   s:yellow, '')
+call s:HL('IncSearch',        s:gray1,   s:yellow, '')
+
+call s:HL('DiffAdd',          s:cyan,    s:gray2,  '')
+call s:HL('DiffChange',       s:yellow2, s:gray2,  '')
+call s:HL('DiffDelete',       s:red,     s:gray2,  '')
+call s:HL('DiffText',         s:green2,  s:gray2,  '')
+
+call s:HL('SpellBad',         s:red,     '',       '')
+call s:HL('SpellCap',         s:blue,    '',       '')
+call s:HL('SpellLocal',       s:green,   '',       '')
+call s:HL('SpellRare',        s:gray2,   s:yellow, '')
+call s:HL('SpecialKey',       s:gray2,   '',       '')
+call s:HL('WildMenu',         s:blue,    '',       '')
+
+call s:HL('Folded',           s:gray4,   s:gray1,  '')
+call s:HL('FoldColumn',       s:gray4,   s:gray1,  '')
+call s:HL('VertSplit',        s:gray4,   '',       '')
+call s:HL('TabLine',          s:gray4,   s:gray2,  '')
+call s:HL('TabLineFill',      s:gray4,   s:gray2,  '')
+call s:HL('TabLineSel',       s:orange,  s:gray3,  '')
+
+call s:HL('ColorColumn',      '',        s:gray1,  '')
+call s:HL('SignColumn',       s:gray5,   s:gray1,  '')
+call s:HL('Question',         s:cyan,    '',       '')
+call s:HL('Visual',           s:gray5,   s:gray3,  '')
+call s:HL('VisualNOS',        s:gray5,   s:gray3,  '')
+call s:HL('ModeMsg',          s:yellow,  '',       '')
+call s:HL('MoreMsg',          s:yellow,  '',       '')
+call s:HL('WarningMsg',       s:red,     '',       '')
+call s:HL('ErrorMsg',         s:red,     '',       '')
+
+"syntax highright========================================
 call s:HL('Constant',         s:orange,  '',       '')
 call s:HL('String',           s:green,   '',       '')
 call s:HL('Character',        s:green,   '',       '')
@@ -100,45 +140,4 @@ call s:HL('Todo',             s:gray1,   s:yellow, '')
 call s:HL('Ignore',           s:gray3,   '',       '')
 call s:HL('Error',            s:red,     '',       '')
 call s:HL('MatchParen',       s:gray2,   s:cyan,   '')
-
-"default highlighting======================================
-call s:HL('Title',            s:green,   '',       '')
-call s:HL('Directory',        s:blue,    '',       '')
-
-call s:HL('Pmenu',            s:white,   '',       '')
-call s:HL('PmenuSel',         s:blue,    s:gray2,  '')
-call s:HL('PmenuSbar',        s:gray4,   '',       '')
-call s:HL('PmenuThumb',       s:gray4,   '',       '')
-
-call s:HL('Search',           s:gray2,   s:yellow, '')
-call s:HL('IncSearch',        s:gray1,   s:yellow, '')
-
-call s:HL('DiffAdd',          s:cyan,    s:gray2,  '')
-call s:HL('DiffChange',       s:yellow2, s:gray2,  '')
-call s:HL('DiffDelete',       s:red,     s:gray2,  '')
-call s:HL('DiffText',         s:green2,  s:gray2,  '')
-
-call s:HL('SpellBad',         s:red,     '',       '')
-call s:HL('SpellCap',         s:blue,    '',       '')
-call s:HL('SpellLocal',       s:green,   '',       '')
-call s:HL('SpellRare',        s:gray2,   s:yellow, '')
-call s:HL('SpecialKey',       s:gray2,   '',       '')
-call s:HL('WildMenu',         s:blue,    '',       '')
-
-call s:HL('Folded',           s:gray4,   s:gray1,  '')
-call s:HL('FoldColumn',       s:gray4,   s:gray1,  '')
-call s:HL('VertSplit',        s:gray4,   '',       '')
-call s:HL('TabLine',          s:gray4,   s:gray2,  '')
-call s:HL('TabLineFill',      s:gray4,   s:gray2,  '')
-call s:HL('TabLineSel',       s:orange,  s:gray3,  '')
-
-call s:HL('ColorColumn',      '',        s:gray1,  '')
-call s:HL('SignColumn',       s:gray5,   s:gray1,  '')
-call s:HL('Question',         s:cyan,    '',       '')
-call s:HL('Visual',           s:gray5,   s:gray3,  '')
-call s:HL('VisualNOS',        s:gray5,   s:gray3,  '')
-call s:HL('ModeMsg',          s:yellow,  '',       '')
-call s:HL('MoreMsg',          s:yellow,  '',       '')
-call s:HL('WarningMsg',       s:red,     '',       '')
-call s:HL('ErrorMsg',         s:red,     '',       '')
 
