@@ -16,6 +16,7 @@ let g:colors_name = "otynium"
 " Color palette
 "----------------------------------------------------------
 let s:red        = '#ef7070'
+let s:red2       = '#a33939'
 let s:orange     = '#e8a368'
 let s:yellow     = '#d8cf6c'
 let s:yellow2    = '#e2d86a'
@@ -23,7 +24,6 @@ let s:green      = '#85c178'
 let s:green2     = '#5cc46b'
 let s:cyan       = '#64bac9'
 let s:blue       = '#6882e2'
-let s:bluepurple = '#6d1ebc'
 let s:purple     = '#b281d1'
 let s:gray1      = '#222c33'
 let s:gray2      = '#314047'
@@ -96,7 +96,7 @@ call s:HL('VisualNOS',        s:gray5,   s:gray3,  '')
 call s:HL('ModeMsg',          s:yellow,  '',       '')
 call s:HL('MoreMsg',          s:yellow,  '',       '')
 call s:HL('WarningMsg',       s:red,     '',       '')
-call s:HL('ErrorMsg',         s:red,     '',       '')
+call s:HL('ErrorMsg',         '',        s:red2,   '')
 
 "syntax highright========================================
 call s:HL('Constant',         s:orange,  '',       '')
@@ -138,6 +138,6 @@ call s:HL('Underlined',       s:red,     '',       '')
 call s:HL('Comment',          s:gray4,   '',       '')
 call s:HL('Todo',             s:gray1,   s:yellow, '')
 call s:HL('Ignore',           s:gray3,   '',       '')
-call s:HL('Error',            s:red,     '',       '')
+call s:HL('Error',            '',        s:red2,   '')
 call s:HL('MatchParen',       s:gray2,   s:cyan,   '')
 
