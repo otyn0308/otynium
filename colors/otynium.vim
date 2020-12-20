@@ -16,7 +16,7 @@ let g:colors_name = "otynium"
 " Color palette
 "----------------------------------------------------------
 let s:red        = '#ef7070'
-let s:red2       = '#a33939'
+let s:red2       = '#801c1c'
 let s:orange     = '#e8a368'
 let s:yellow     = '#d8cf6c'
 let s:yellow2    = '#e2d86a'
