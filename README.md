@@ -2,7 +2,7 @@
 colorscheme
 
 ![otynium](https://github.com/otyn0308/otynium/blob/master/picture/Screenshot%20from%202018-12-08%2012-24-38.png)
-![otynium_colorling](https://github.com/otyn0308/otynium/blob/master/picture/otynium_colorling.png)
+![otynium_colouring](https://github.com/otyn0308/otynium/blob/master/picture/otynium_colorling.png)
 
 ## install
 

@@ -16,7 +16,7 @@ let g:colors_name = "otynium"
 " Color palette
 "----------------------------------------------------------
 let s:red        = '#ef7070'
-let s:red2       = '#801c1c'
+let s:red2       = '#8a1a1a'
 let s:orange     = '#e8a368'
 let s:yellow     = '#d8cf6c'
 let s:yellow2    = '#e2d86a'
@@ -31,6 +31,7 @@ let s:gray3      = '#506872'
 let s:gray4      = '#5f7b87'
 let s:gray5      = '#7395a3'
 let s:white      = '#a9afb2'
+let s:black      = '#050a26'
 
 function! s:HL(group, guifg, guibg, attr)
   if a:guifg != ''
@@ -61,9 +62,9 @@ call s:HL('StatusLineTermNC', s:gray1,   s:gray4,  '')
 call s:HL('Title',            s:green,   '',       '')
 call s:HL('Directory',        s:blue,    '',       '')
 
-call s:HL('Pmenu',            s:white,   '',       '')
-call s:HL('PmenuSel',         s:blue,    s:gray2,  '')
-call s:HL('PmenuSbar',        s:gray4,   '',       '')
+call s:HL('Pmenu',            s:white,   s:black,  '')
+call s:HL('PmenuSel',         s:white,   s:gray2,  '')
+call s:HL('PmenuSbar',        s:gray3,   '',       '')
 call s:HL('PmenuThumb',       s:gray4,   '',       '')
 
 call s:HL('Search',           s:gray2,   s:yellow, '')
