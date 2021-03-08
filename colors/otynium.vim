@@ -114,7 +114,7 @@ call s:HL('Conditional',      s:purple,  '',       '')
 call s:HL('Repeat',           s:purple,  '',       '')
 call s:HL('Label',            s:purple,  '',       '')
 call s:HL('Operator',         s:blue,    '',       '')
-call s:HL('keyword',          s:purple,  '',       '')
+call s:HL('Keyword',          s:purple,  '',       '')
 call s:HL('Exception',        s:yellow,  '',       '')
 
 call s:HL('Type',             s:yellow,  '',       '')
@@ -142,3 +142,106 @@ call s:HL('Ignore',           s:gray3,   '',       '')
 call s:HL('Error',            '',        s:red2,   '')
 call s:HL('MatchParen',       s:gray2,   s:cyan,   '')
 
+call s:HL('Warning',          s:orange,  '',       '')
+call s:HL('Hint',             '',   s:gray3,       '')
+call s:HL('HintMsg',          s:gray3,   '',       '')
+call s:HL('Info',             '',    s:cyan,       '')
+call s:HL('InfoMsg',          s:cyan,    '',       '')
+
+" coc.nvim ==============================================
+call s:HL('CocErrorHighlight',   '',  '', 'underline')
+call s:HL('CocWarningHighlight', '',  '', 'underline')
+call s:HL('CocHintHighlight',    '',  '', 'underline')
+call s:HL('CocInfoHighlight',    '',  '', 'underline')
+
+" ALE ===================================================
+hi link ALEErrorSign ErrorMsg
+hi link ALEWarningSign WarningMsg
+
+" LSP ===================================================
+
+hi link LspDiagnosticsDefaultError Error
+hi link LspDiagnosticsUnderlineError CocErrorHighlight
+hi link LspDiagnosticsFloatingError ErrorMsg
+hi link LspDiagnosticsSignError LspDiagnosticsFloatingError
+
+hi link LspDiagnosticsDefaultWarning Warning
+hi link LspDiagnosticsUnderlineWarning CocWarningHighlight
+hi link LspDiagnosticsFloatingWarning WarningMsg
+hi link LspDiagnosticsSignWarning LspDiagnosticsFloatingWarning
+
+hi link LspDiagnosticsDefaultHint Hint
+hi link LspDiagnosticsUnderlineHint CocHintHighlight
+hi link LspDiagnosticsFloatingHint HintMsg
+hi link LspDiagnosticsSignHint LspDiagnosticsFloatingHint
+
+hi link LspDiagnosticsDefaultInformation Information
+hi link LspDiagnosticsUnderlineInformation CocInfoHighlight
+hi link LspDiagnosticsFloatingInformation InformationMsg
+hi link LspDiagnosticsSignInformation LspDiagnosticsFloatingInformation
+
+" TreeSitter ============================================
+hi link TSError Error
+hi link TSPunctDelimiter Delimiter
+hi link TSPunctBracket Normal
+hi link TSPunctSpecial Special
+
+hi link TSConstant Constant
+hi link TSString String
+hi link TSStringRegex String
+hi link TSStringEscape String
+hi link TSCharacter Character
+hi link TSNumber Number
+hi link TSFloat Float
+hi link TSBoolean Boolean
+hi link TSAnnotation Function
+hi link TSAttribute Title
+hi link TSNamespace Title
+
+hi link TSFuncBuiltin Function
+hi link TSFunction Function
+hi link TSFuncMacro PreProc
+hi link TSParameter Type
+hi link TSParameterReference TSParameter
+hi link TSMethod Function
+hi link TSField TSParameter
+hi link TSProperty TSParameter
+hi link TSConstructor Function
+
+hi link TSConditional Conditional
+hi link TSRepeat Repeat
+hi link TSLabel Label
+
+hi link TSKeyword Keyword
+hi link TSKeywordFunction Keyword
+hi link TSKeywordOperator Operator
+hi link TSOperator Operator
+hi link TSException Exception
+hi link TSType Type
+hi link TSTypeBuiltin Type
+hi link TSStructure Structure
+hi link TSInclude Include
+
+call s:HL('TSVariable',     s:cyan,      '',          '')
+hi link TSVariableBuiltin TSVariable
+hi link TSText Normal
+call s:HL('TSStrong',       s:white, s:gray1,      'bold')
+hi link TSEmphasis TSStrong
+call s:HL('TSStrong',       s:white, s:gray1, 'underline')
+hi link TSTitle Title
+call s:HL('TSLiteral',      s:orange,    '',          '')
+call s:HL('TSURI',          s:orange,    '',          '')
+
+hi link TSTag Tag
+call s:HL('TSTagDelimiter', s:gray4,     '',          '')
+
+" html and markdown ======================================
+call s:HL('markdownH1',             s:white,  '', 'bold')
+call s:HL('markdownH2',             s:white,  '', 'bold')
+call s:HL('markdownH3',             s:white,  '', 'bold')
+call s:HL('markdownH4',             s:white,  '', 'bold')
+call s:HL('markdownH5',             s:white,  '', 'bold')
+call s:HL('markdownH6',             s:white,  '', 'bold')
+call s:HL('markdownBold'   ,        s:white,  '', 'bold')
+call s:HL('markdownItalic' ,        s:white,  '', 'italic')
+call s:HL('markdownBoldItalic',     s:white,  '', 'italic,bold')
