@@ -179,3 +179,58 @@ hi link LspDiagnosticsDefaultInformation Information
 hi link LspDiagnosticsUnderlineInformation CocInfoHighlight
 hi link LspDiagnosticsFloatingInformation InformationMsg
 hi link LspDiagnosticsSignInformation LspDiagnosticsFloatingInformation
+
+" TreeSitter ============================================
+hi link TSError Error
+hi link TSPunctDelimiter Delimiter
+hi link TSPunctBracket Normal
+hi link TSPunctSpecial Special
+
+hi link TSConstant Constant
+hi link TSString String
+hi link TSStringRegex String
+hi link TSStringEscape String
+hi link TSCharacter Character
+hi link TSNumber Number
+hi link TSFloat Float
+hi link TSBoolean Boolean
+hi link TSAnnotation Function
+hi link TSAttribute Title
+hi link TSNamespace Title
+
+hi link TSFuncBuiltin Function
+hi link TSFunction Function
+hi link TSFuncMacro PreProc
+hi link TSParameter Type
+hi link TSParameterReference TSParameter
+hi link TSMethod Function
+hi link TSField TSParameter
+hi link TSProperty TSParameter
+hi link TSConstructor Function
+
+hi link TSConditional Conditional
+hi link TSRepeat Repeat
+hi link TSLabel Label
+
+hi link TSKeyword Keyword
+hi link TSKeywordFunction Keyword
+hi link TSKeywordOperator Operator
+hi link TSOperator Operator
+hi link TSException Exception
+hi link TSType Type
+hi link TSTypeBuiltin Type
+hi link TSStructure Structure
+hi link TSInclude Include
+
+call s:HL('TSVariable',     s:cyan,      '',          '')
+hi link TSVariableBuiltin TSVariable
+hi link TSText Normal
+call s:HL('TSStrong',       s:white, s:gray1,      'bold')
+hi link TSEmphasis TSStrong
+call s:HL('TSStrong',       s:white, s:gray1, 'underline')
+hi link TSTitle Title
+call s:HL('TSLiteral',      s:orange,    '',          '')
+call s:HL('TSURI',          s:orange,    '',          '')
+
+hi link TSTag Tag
+call s:HL('TSTagDelimiter', s:gray4,     '',          '')
