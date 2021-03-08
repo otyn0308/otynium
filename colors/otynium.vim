@@ -114,7 +114,7 @@ call s:HL('Conditional',      s:purple,  '',       '')
 call s:HL('Repeat',           s:purple,  '',       '')
 call s:HL('Label',            s:purple,  '',       '')
 call s:HL('Operator',         s:blue,    '',       '')
-call s:HL('keyword',          s:purple,  '',       '')
+call s:HL('Keyword',          s:purple,  '',       '')
 call s:HL('Exception',        s:yellow,  '',       '')
 
 call s:HL('Type',             s:yellow,  '',       '')
