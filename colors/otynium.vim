@@ -234,3 +234,14 @@ call s:HL('TSURI',          s:orange,    '',          '')
 
 hi link TSTag Tag
 call s:HL('TSTagDelimiter', s:gray4,     '',          '')
+
+" html and markdown ======================================
+call s:HL('markdownH1',             s:white,  '', 'bold')
+call s:HL('markdownH2',             s:white,  '', 'bold')
+call s:HL('markdownH3',             s:white,  '', 'bold')
+call s:HL('markdownH4',             s:white,  '', 'bold')
+call s:HL('markdownH5',             s:white,  '', 'bold')
+call s:HL('markdownH6',             s:white,  '', 'bold')
+call s:HL('markdownBold'   ,        s:white,  '', 'bold')
+call s:HL('markdownItalic' ,        s:white,  '', 'italic')
+call s:HL('markdownBoldItalic',     s:white,  '', 'italic,bold')
