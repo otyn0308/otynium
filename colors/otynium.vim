@@ -142,3 +142,40 @@ call s:HL('Ignore',           s:gray3,   '',       '')
 call s:HL('Error',            '',        s:red2,   '')
 call s:HL('MatchParen',       s:gray2,   s:cyan,   '')
 
+call s:HL('Warning',          s:orange,  '',       '')
+call s:HL('Hint',             '',   s:gray3,       '')
+call s:HL('HintMsg',          s:gray3,   '',       '')
+call s:HL('Info',             '',    s:cyan,       '')
+call s:HL('InfoMsg',          s:cyan,    '',       '')
+
+" coc.nvim ==============================================
+call s:HL('CocErrorHighlight',   '',  '', 'underline')
+call s:HL('CocWarningHighlight', '',  '', 'underline')
+call s:HL('CocHintHighlight',    '',  '', 'underline')
+call s:HL('CocInfoHighlight',    '',  '', 'underline')
+
+" ALE ===================================================
+hi link ALEErrorSign ErrorMsg
+hi link ALEWarningSign WarningMsg
+
+" LSP ===================================================
+
+hi link LspDiagnosticsDefaultError Error
+hi link LspDiagnosticsUnderlineError CocErrorHighlight
+hi link LspDiagnosticsFloatingError ErrorMsg
+hi link LspDiagnosticsSignError LspDiagnosticsFloatingError
+
+hi link LspDiagnosticsDefaultWarning Warning
+hi link LspDiagnosticsUnderlineWarning CocWarningHighlight
+hi link LspDiagnosticsFloatingWarning WarningMsg
+hi link LspDiagnosticsSignWarning LspDiagnosticsFloatingWarning
+
+hi link LspDiagnosticsDefaultHint Hint
+hi link LspDiagnosticsUnderlineHint CocHintHighlight
+hi link LspDiagnosticsFloatingHint HintMsg
+hi link LspDiagnosticsSignHint LspDiagnosticsFloatingHint
+
+hi link LspDiagnosticsDefaultInformation Information
+hi link LspDiagnosticsUnderlineInformation CocInfoHighlight
+hi link LspDiagnosticsFloatingInformation InformationMsg
+hi link LspDiagnosticsSignInformation LspDiagnosticsFloatingInformation
