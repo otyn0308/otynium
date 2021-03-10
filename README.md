@@ -19,6 +19,20 @@ colorscheme
 
 ## install
 
+### [Packer.nvim](https://github.com/wbthomason/packer.nvim)
+
+```lua
+use 'otyn0308/otynium'
+```
+
+### [vim-plug](https://github.com/junegunn/vim-plug)
+
+```vim
+Plug 'otyn0308/otynium'
+```
+
+### manual install
+
 ```
 $ git clone https://github.com/otyn0308/otynium.git
 :!echo $VIMRUNTIME
