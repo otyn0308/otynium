@@ -48,3 +48,14 @@ $ sudo cp otynium.vim /usr/share/vim/vim81/colors
 
 ここでいう /usr/share/vim/vim81 は `:!echo $VIMRUNTIME` で出てきたやつ  
 自分用メモなので雑です．
+
+### modyfy .vimrc
+
+Using a full-color terminal  
+```
+colors otynium
+```
+If the terminal support 256 colors.  
+```
+colors otynium256
+```
