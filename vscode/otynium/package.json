@@ -1,0 +1,21 @@
+{
+    "name": "otynium",
+    "displayName": "otynium",
+    "description": "otynium colorscheme",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.62.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "otynium",
+                "uiTheme": "vs-dark",
+                "path": "./themes/otynium-color-theme.json"
+            }
+        ]
+    }
+}
