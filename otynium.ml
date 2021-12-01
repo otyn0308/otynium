@@ -1,3 +1,18 @@
+let vim_preamble name =
+  [
+    "hi clear";
+    "if version > 580";
+    "  hi clear ";
+    "  if exists(\"syntax_on\") ";
+    "    syntax reset ";
+    "  endif ";
+    "endif";
+    "";
+    "set background=dark";
+    "set termguicolors";
+    Printf.sprintf "let g:colors_name = \"%s\"" name;
+  ]
+
 type color_t = {
   red     : string;
   red2    : string;
@@ -17,6 +32,7 @@ type color_t = {
   white   : string;
   black   : string;
 }
+[@@ocamlformat "disable"]
 
 let color =
   {
@@ -38,6 +54,7 @@ let color =
     white   = "#a9afb2";
     black   = "#050a26";
   }
+[@@ocamlformat "disable"]
 
 let color256 =
   {
@@ -59,6 +76,7 @@ let color256 =
     white   = "#a8a8a8";
     black   = "#00005f";
   }
+[@@ocamlformat "disable"]
 
 type vim_highlight_t =
   (* group * guifg * guibg * attr *)
@@ -235,8 +253,9 @@ let vim color =
   Hi ("markdownH6"         , Some color.white , None , Some "bold");
   Hi ("markdownBold"       , Some color.white , None , Some "bold");
   Hi ("markdownItalic"     , Some color.white , None , Some "italic");
-  Hi ("markdownBoldItalic" , Some color.white , None , Some "italic    , bold");
+  Hi ("markdownBoldItalic" , Some color.white , None , Some "italic,bold");
   ]
+[@@ocamlformat "disable"]
 
 let generate_vim color =
   let with_name name = function Some var -> name ^ "=" ^ var | None -> "" in
@@ -250,9 +269,11 @@ let generate_vim color =
   color |> vim |> List.map line |> List.fold_left ( ^ ) ""
 
 let () =
-  let oc_vim = open_out "otynium.vim" in
+  let oc_vim = open_out "vim/otynium.vim" in
+  Printf.fprintf oc_vim "%s" @@ List.fold_left (fun acc line -> acc ^ line ^ "\n") "" @@ vim_preamble "otynium";
   Printf.fprintf oc_vim "%s" @@ generate_vim color;
   close_out oc_vim;
-  let oc_vim = open_out "otynium256.vim" in
+  let oc_vim = open_out "vim/otynium256.vim" in
+  Printf.fprintf oc_vim "%s" @@ List.fold_left (fun acc line -> acc ^ line ^ "\n") "" @@ vim_preamble "otynium256";
   Printf.fprintf oc_vim "%s" @@ generate_vim color256;
   close_out oc_vim
