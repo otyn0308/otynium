@@ -54,6 +54,7 @@ class Palette
   end
 
   def fg(name)
+    print "#{name} not found!" unless @colors.key?(name)
     @colors[name][:fg]
   end
 
@@ -62,6 +63,7 @@ class Palette
   end
 
   def bg(name)
+    print "#{name} not found!" unless @colors.key?(name)
     @colors[name][:bg]
   end
 

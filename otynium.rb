@@ -228,6 +228,34 @@ vscode = vscode_colorscheme('otynium', style_otynium, 'dark') do
     "source.stylus support.type.property-name",
     "source.postcss support.type.property-name",
   ]
+  token ['Sub-methods'], :Special, [
+    "entity.name.module.js",
+    "variable.import.parameter.js",
+    "variable.other.class.js"
+  ]
+  token ['Language methods'], :Special, [
+    "variable.language",
+  ]
+  token ['entity.name.method.js'], :Function, [
+    "entity.name.method.js",
+  ]
+  token ['meta.method.js'], :Function, [
+    "meta.class-method.js entity.name.function.js",
+    "variable.function.constructor"
+  ]
+  token ['Attributes'], :Title, [
+    'entity.other.attribute-name',
+  ]
+  token ['HTML Attributes'], :Keyword, [
+    "text.html.basic entity.other.attribute-name.html",
+    "text.html.basic entity.other.attribute-name"
+  ]
+  token ['CSS Classes'], :Keyword, [
+    'entity.other.attribute-name.class',
+  ]
+  token ['CSS IDs'], :Special, [
+    "source.sass keyword.control"
+  ]
 end
 
 
