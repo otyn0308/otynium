@@ -467,6 +467,6 @@ end
 vim = gen_vim('otynium', style_otynium)
 vim256 = gen_vim('otynium256', style_otynium256)
 
-File.write("vim/otynium.vim", vim)
-File.write("vim/otynium256.vim", vim256)
+File.write("colors/otynium.vim", vim)
+File.write("colors/otynium256.vim", vim256)
 File.write("vscode/themes/otynium-color-theme.json", vscode)
