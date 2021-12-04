@@ -1,0 +1,32 @@
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 3.0
+    - run: ruby otynium.rb
+    - run: tar --zstd -cf vscode-otynium.tar.zst ./vscode
+    - run: tar --zstd -cf vim-otynium.tar.zst ./colors
+    - name: Upload vscode file release
+      uses: svenstaro/upload-release-action@2.2.1
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: vscode-otynium.tar.zst
+        asset_name: vscode-otynium.tar.zst
+        tag: ${{ github.ref }}
+        overwrite: true
+    - name: Upload vim file release
+      uses: svenstaro/upload-release-action@2.2.1
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: vim-otynium.tar.zst
+        asset_name: vim-otynium.tar.zst
+        tag: ${{ github.ref }}
+        overwrite: true
