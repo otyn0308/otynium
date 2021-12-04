@@ -13,3 +13,4 @@ jobs:
       with:
         ruby-version: ${{ matrix.ruby-version }}
     - run: ruby otynium.rb
+    - run: test -z "$(git diff)"
