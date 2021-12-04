@@ -111,12 +111,14 @@ def gen_style(color)
     hi :Macro               , :cyan    , nil     , []
     hi :PreCondit           , :blue    , nil     , []
     hi :Special             , :cyan    , nil     , []
+    hi :SpecialItalic       , :cyan    , nil     , [:italic]
     hi :SpecialChar         , :cyan    , nil     , []
     hi :Tag                 , :blue    , nil     , []
     hi :Delimiter           , :blue    , nil     , []
     hi :SpecialComment      , :cyan    , nil     , []
     hi :Debug               , :red     , nil     , []
     hi :Underlined          , :red     , nil     , []
+    hi :Link                , :yellow2 , nil     , [:underline]
     hi :Comment             , :gray4   , nil     , []
     hi :Todo                , :gray1   , :yellow , []
     hi :Ignore              , :gray3   , nil     , []
@@ -256,6 +258,35 @@ vscode = vscode_colorscheme('otynium', style_otynium, 'dark') do
   token ['CSS IDs'], :Special, [
     "source.sass keyword.control"
   ]
+  token ['Inserted'], :DiffAdd, [
+    "markup.inserted"
+  ]
+  token ['Deleted'], :DiffDelete, [
+    'markup.deleted'
+  ]
+  token ['Changed'], :DiffChange, [
+    'markup.changed'
+  ]
+  token ['Regular Expression'], :Operator, [
+    'string.regexp'
+  ]
+  token ['Escape Characters'], :Operator, [
+    'constant.character.escape'
+  ]
+  token ['URL'], :Link, [
+    '*url*',
+    '*link*',
+    '*uri*'
+  ]
+  token ['Decorators'], :SpecialItalic, [
+    'tag.decorator.js entity.name.tag.js',
+    'tag.decorator.js punctual.definition.tag.js',
+  ]
+  token ['ES7 Bind Operator'], :SpecialItalic, [
+    'source.js constant.other.object.key.js string.unquoted.label.js'
+  ]
+  # TODO: json key
+  # TODO: markdown
 end
 
 
